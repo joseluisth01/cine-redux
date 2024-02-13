@@ -1,0 +1,392 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+.portada {
+    width: 100%;
+}
+
+.movie-list-container {
+    margin: 0 auto;
+    padding: 30px;
+    background-image: url('../public/img/fondo12.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+.fondo {
+    margin: 0 auto;
+    padding: 40px;
+    background-image: url('../public/img/fondo12.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.poster {
+    border-radius: 10px;
+}
+
+.poster:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.poster2 {
+    border-radius: 10px;
+}
+
+.poster2:hover {
+    cursor: pointer;
+}
+
+.movie-item {
+    width: 23%;
+    margin-bottom: 30px;
+    text-align: center;
+
+}
+
+.movie-item h2 {
+    margin-top: 10px;
+    color: black;
+    font-weight: bolder;
+}
+
+.titulo {
+    font-weight: bolder;
+    text-align: center;
+    font-size: 3rem;
+    /* font-family: 'Honk', system-ui; */
+    font-family: 'Anton', sans-serif;
+}
+
+.search-container {
+    margin-bottom: 20px;
+    background-color: #ccc;
+    border-radius: 7px;
+    overflow: hidden;
+    /* Asegura que el borde redondeado se aplique correctamente */
+}
+
+.search-container input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background-color: transparent;
+    /* Hace que el fondo del campo de entrada sea transparente */
+}
+
+.search-container input[type="text"]:focus {
+    outline: none;
+}
+
+.buttoncargar {
+    background-color: #181414;
+    /* Color de fondo */
+    color: white;
+    /* Color del texto */
+    padding: 10px 20px;
+    /* Espacio interno */
+    border: none;
+    /* Borde */
+    border-radius: 4px;
+    /* Borde redondeado */
+    cursor: pointer;
+    /* Cursor al pasar por encima */
+    font-weight: bolder;
+    display: block;
+    /* Convertir en bloque para aplicar margen automático */
+    margin: 0 auto;
+    /* Margen automático para centrar horizontalmente */
+    border: 1px solid black;
+}
+
+
+.buttoncargar:hover {
+    background-color: #484040;
+    /* Color de fondo al pasar por encima */
+    border: 1px solid black;
+}
+.info2 {
+    margin: 0 auto;
+    text-align: center; /* Para centrar el contenido */
+}
+
+.buttoncargar2 {
+    background-color: #181414;
+    /* Color de fondo */
+    color: white;
+    /* Color del texto */
+    display: inline-block;
+    padding: 10px 20px;
+    /* Espacio interno */
+    border: none;
+    /* Borde */
+    border-radius: 4px;
+    /* Borde redondeado */
+    cursor: pointer;
+    /* Cursor al pasar por encima */
+    font-weight: bolder;
+    /* Convertir en bloque para aplicar margen automático */
+    margin: 0 auto;
+    /* Margen automático para centrar horizontalmente */
+    border: 1px solid black;
+}
+
+
+.buttoncargar2:hover {
+    background-color: #484040;
+    /* Color de fondo al pasar por encima */
+    border: 1px solid black;
+}
+
+
+/* *********************************HEADER*********************************************** */
+
+.enlace {
+    font-size: 1.2rem;
+    /* font-family: 'Sixtyfour', sans-serif; */
+    font-family: 'Anton', sans-serif;
+    position: relative;
+    color: white;
+    text-decoration: none;
+}
+
+.titulo5{
+    font-family: 'Anton', sans-serif;
+}
+
+.enlace::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.1s ease-in-out 0s;
+}
+
+.enlace:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.usuario {
+    width: 1.6rem;
+}
+
+/* ***************************************** */
+.detalles-container {
+    padding: 20px;
+    background-image: url('../public/img/fondo12.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+.titulo2 {
+    margin-bottom: 20px;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 5rem;
+    font-family: 'Honk', system-ui;
+}
+
+.poster3 {
+    width: 25rem;
+    /* Aumenta el tamaño del póster */
+    height: auto;
+    margin-left: 10%;
+}
+
+
+/* ********************************** */
+
+/* Estilo para el modal */
+.modalDialog {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(204, 204, 204, 0.8);
+    z-index: 99999;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalDialog:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modalDialog > div {
+    width: 600px;
+    position: relative;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: #bcbcbc;
+    box-shadow: 0 0 10px rgba(18, 18, 18, 0.8);
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.close::before, .close::after {
+    position: absolute;
+    width: 2px;
+    height: 24px;
+    background-color: #333;
+}
+
+.close::before {
+    transform: rotate(45deg);
+}
+
+.close::after {
+    transform: rotate(-45deg);
+}
+
+.modalDialog h1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+.modalDialog form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-group label {
+    width: 120px; /* Ajusta el ancho según tus necesidades */
+    text-align: right;
+    margin-right: 10px; /* Espacio entre el label y el input */
+}
+
+.form-group input {
+    width: 250px; /* Ajusta el ancho según tus necesidades */
+    padding: 5px; /* Ajusta el padding según tus necesidades */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.foto{
+    margin-left: 10%;
+    width: 40rem;
+}
+
+.fuente{
+    font-family: 'Protest Riot', sans-serif;
+}
+
+
+
+
+
+
+.wrapper {
+	margin: 0 auto;
+	padding: 32px;
+}
+
+/* a partir de aqui el CSS de las animaciones */
+
+@keyframes anim-fade-in { from { opacity: 0; } to { opacity: 1 } }
+
+@keyframes anim-up { 
+	from { opacity: 0; transform: translateY(100px); } 
+	to { opacity: 1; transform: translateY(0px); }  
+}		
+@keyframes anim-upp { 
+	from { opacity: 0; transform: translateY(100px); } 
+	to { opacity: 1; transform: translateY(0px); }  
+}
+
+@keyframes anim-down { 
+	from { opacity: 0; transform: translateY(-100px); } 
+	to { opacity: 1; transform: translateY(0px); }  
+}		
+
+@keyframes anim-left { 
+	from { opacity: 0; transform: translateX(100px); } 
+	to { opacity: 1; transform: translateX(0px); }  
+}		
+
+@keyframes anim-right { 
+	from { opacity: 0; transform: translateX(-100px); } 
+	to { opacity: 1; transform: translateX(0px); }  
+}		
+
+.anim-up, .anim-down, .anim-left, .anim-right, .anim-fade-in {
+	animation-duration: 3s; /* la animacion dura X segundos */
+	animation-delay: 1s; /* esperamos X segundos antes de hacer la animacion */			
+	animation-fill-mode: both; /* aplica estilos de la animacion antes y despues de reproducirla */
+}
+
+.anim-upp {
+	animation-duration: 1.5s; /* la animacion dura X segundos */
+	animation-delay: 0.5s; /* esperamos X segundos antes de hacer la animacion */			
+	animation-fill-mode: both; /* aplica estilos de la animacion antes y despues de reproducirla */
+}
+
+.anim-up { animation-name: anim-up; }
+.anim-upp { animation-name: anim-up; }
+.anim-down { animation-name: anim-down; }
+.anim-left { animation-name: anim-left; }
+.anim-right { animation-name: anim-right; }
+.anim-fade-in { animation-name: anim-fade-in; }
+
+.anim-pause-2 { animation-delay: 2s; } /* la animacion empieza en 2 seg. */		
+.anim-pause-3 { animation-delay: 3s; } /* la animacion empieza en 3 seg. */
+.anim-pause-4 { animation-delay: 4s; } /* la animacion empieza en 4 seg. */
+.anim-pause-5 { animation-delay: 5s; } /* la animacion empieza en 5 seg. */
+
+/* todas las animaciones pausadas */
+.paused * { 
+	animation-play-state: paused;
+}
+
