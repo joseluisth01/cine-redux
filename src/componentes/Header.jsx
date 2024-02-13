@@ -19,7 +19,7 @@ const Header = () => {
                     <div className="hidden justify-around w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
                         <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-10 lg:mt-0">
                             <li>
-                                <Link href="/Peliculas" className="enlace">Películas</Link>
+                                <Link to="/Peliculas" className="enlace">Películas</Link>
                             </li>
                             <li>
                                 <a href="#" className="enlace">Estrenos</a>

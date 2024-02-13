@@ -2,7 +2,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slide from '../componentes/Slide';
 import { Link } from 'react-router-dom';
-import Portada from '../../public/img/portada.png';
+import Portada from '../../public/img/portada.jpg';
 
 const Mainprincipal = () => {
 
