@@ -1,6 +1,7 @@
 
-import { Routes, Route} from 'react-router-dom';
+import { Link,Routes, Route} from 'react-router-dom';
 import Peliculas from '../componentes/Peliculas';
+import Logo from '../../public/img/logo2.2.png';
 
 const Header = () => {
     return (
@@ -8,7 +9,7 @@ const Header = () => {
             <nav className="bg-neutral-900 border-gray-200 px-4 lg:px-6 py-5">
                 <div className="flex flex-wrap justify-between items-center mx-auto ">
                     <a href="/" className="flex items-center ml-16 transition-transform transform hover:scale-80">
-                        <img src="../../public/img/logo2.2.png" className="w-32 transition-transform transform hover:scale-110" />
+                        <img src={Logo} className="w-32 transition-transform transform hover:scale-110" />
                     </a>
 
                     <div className="flex items-center lg:order-2 mr-7">
@@ -18,7 +19,7 @@ const Header = () => {
                     <div className="hidden justify-around w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
                         <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-10 lg:mt-0">
                             <li>
-                                <a href="/Peliculas" className="enlace">Películas</a>
+                                <Link href="/Peliculas" className="enlace">Películas</Link>
                             </li>
                             <li>
                                 <a href="#" className="enlace">Estrenos</a>

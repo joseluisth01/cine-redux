@@ -2,6 +2,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slide from '../componentes/Slide';
 import { Link } from 'react-router-dom';
+import Portada from '../../public/img/portada.png';
 
 const Mainprincipal = () => {
 
@@ -31,7 +32,7 @@ const Mainprincipal = () => {
             <br /><br />
             <div className="flex wrapper">
                 <div className="flex items-center">
-                    <img src="../../public/img/portada.jpg" alt="Imagen" className="foto anim-up" />
+                    <img src={Portada} alt="Imagen" className="foto anim-up" />
                     <div className="px-4 w-70">
                         <p className="mt-3 text-center text-2xl fuente anim-upp anim-pause-2">¡Bienvenidos a <strong>TAPACO CINEMAS</strong>, donde la magia del cine cobra vida! <br /><br /></p>
                         <p className="mt-3 text-center text-2xl fuente anim-upp anim-pause-3">Con una selección diversa de películas y tecnología de vanguardia, estamos aquí para ofrecerte una experiencia cinematográfica inolvidable.<br /><br /></p>
